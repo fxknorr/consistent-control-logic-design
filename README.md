@@ -1,5 +1,6 @@
+# consistent-control-logic-design
 
-Use Eclipse Modeling Tools to import projects
+Use Eclipse Modeling Tools to import projects (tested with version 2022-06)
 
 This repository includes the following folders:
 * M2M Transformations:
@@ -14,4 +15,4 @@ This repository includes the following folders:
 	* UML2NMF transformation
 	
 * Python Source
-	* EExample for theout of scope json to xmi 'transformation'
+	* Example for theout of scope json to xmi 'transformation'
