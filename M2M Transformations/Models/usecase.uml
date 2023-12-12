@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmlns:usecase_profile="http://tuwien.ac.at/usecase.profile" xsi:schemaLocation="http://tuwien.ac.at/usecase.profile /at.ac.tuwien.openbam/profile/usecase_profile.profile.uml#_11UeUHyiEe65Y-BI6bwPGw">
+  <uml:Model xmi:id="_BsbPcAZ7Ee2SsqHcGpC6iA" name="usecase">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_BwFncAZ7Ee2SsqHcGpC6iA">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_NLhwAAZ7Ee2SsqHcGpC6iA" name="StateMachine">
+      <region xmi:type="uml:Region" xmi:id="_OI3iAAZ7Ee2SsqHcGpC6iA" name="Region">
+        <transition xmi:type="uml:Transition" xmi:id="_oj0W0AZ7Ee2SsqHcGpC6iA" source="_eS9yEAZ7Ee2SsqHcGpC6iA" target="_gg9ToAZ7Ee2SsqHcGpC6iA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_zVPSAAZ7Ee2SsqHcGpC6iA" name="systemTurnedOn" source="_gg9ToAZ7Ee2SsqHcGpC6iA" target="_vc3SQAZ7Ee2SsqHcGpC6iA">
+          <trigger xmi:type="uml:Trigger" xmi:id="_1Kkp4AalEe2SsqHcGpC6iA" name="systemTurnedOnTrigger" event="_7JNFIAadEe2SsqHcGpC6iA"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_9nYUgAddEe2BTqBqaLBdYQ" name="systemStartedUp" source="_vc3SQAZ7Ee2SsqHcGpC6iA" target="_mUjjsAdcEe2BTqBqaLBdYQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_ecOvkAzNEe2_rLb2A_yEYw" name="StartUpTimeTrigger" event="_eOiR0AzNEe2_rLb2A_yEYw"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_A6N-QAdeEe2BTqBqaLBdYQ" name="systemTurnedOff" source="_mUjjsAdcEe2BTqBqaLBdYQ" target="_gg9ToAZ7Ee2SsqHcGpC6iA">
+          <trigger xmi:type="uml:Trigger" xmi:id="_z4VEsA2REe2DI_2cXpX6SQ" name="systemTurnedOffTrigger" event="_Wmdy0AdfEe2BTqBqaLBdYQ"/>
+        </transition>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_eS9yEAZ7Ee2SsqHcGpC6iA" name="Start"/>
+        <subvertex xmi:type="uml:State" xmi:id="_gg9ToAZ7Ee2SsqHcGpC6iA" name="SystemOff">
+          <doActivity xmi:type="uml:FunctionBehavior" xmi:id="_1ns-wB4zEe2bwPIwMnZGcw" name="SystemOffBehavior">
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_1ns-wR4zEe2bwPIwMnZGcw" name="WritePreheaterValve"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_1ns-wh4zEe2bwPIwMnZGcw" name="WritePreheaterPumps"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_1ns-wx4zEe2bwPIwMnZGcw" name="WriteFans"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_1ns-xB4zEe2bwPIwMnZGcw" name="WriteDampers"/>
+          </doActivity>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_vc3SQAZ7Ee2SsqHcGpC6iA" name="StartUpMode">
+          <entry xmi:type="uml:FunctionBehavior" xmi:id="_cWY-gB1iEe2bwPIwMnZGcw" name="StartUpBehavior">
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_lDHMIB1kEe2bwPIwMnZGcw" name="WritePreheaterValve"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_lKauAB1kEe2bwPIwMnZGcw" name="WritePreheaterPumps"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_lPNHYB1kEe2bwPIwMnZGcw" name="WriteFans"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_exxw8B1kEe2bwPIwMnZGcw" name="WriteDampers"/>
+          </entry>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_mUjjsAdcEe2BTqBqaLBdYQ" name="NormalMode">
+          <doActivity xmi:type="uml:FunctionBehavior" xmi:id="_ZF5LIB4zEe2bwPIwMnZGcw" name="SystemOnBehavior">
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_ZF5LIR4zEe2bwPIwMnZGcw" name="WritePreheaterValve"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_ZF5LIh4zEe2bwPIwMnZGcw" name="WritePreheaterPumps"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_ZF5LIx4zEe2bwPIwMnZGcw" name="WriteFans"/>
+            <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_ZF5LJB4zEe2bwPIwMnZGcw" name="WriteDampers"/>
+          </doActivity>
+        </subvertex>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_rLQy0AZ-Ee2SsqHcGpC6iA" name="Application" visibility="package">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IvOZcAafEe2SsqHcGpC6iA" name="read_signal" isQuery="true">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_IvOZcQafEe2SsqHcGpC6iA" name="signal_id" type="_tYjvcA2SEe2DI_2cXpX6SQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_vZ6L4A2BEe2_rLb2A_yEYw" name="write_signal">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_cY-hgA2VEe2DI_2cXpX6SQ" name="signal" type="_tYjvcA2SEe2DI_2cXpX6SQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_f7BE4A2VEe2DI_2cXpX6SQ" name="value">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <nestedClassifier xmi:type="uml:Enumeration" xmi:id="_tYjvcA2SEe2DI_2cXpX6SQ" name="Signals">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_wohZcA2UEe2DI_2cXpX6SQ" name="Dampers"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nWL18A2VEe2DI_2cXpX6SQ" name="PreheaterValve"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_nhYZUA2VEe2DI_2cXpX6SQ" name="PreheaterPump"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_oF8e8A2VEe2DI_2cXpX6SQ" name="Fans"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_yBC2IA2VEe2DI_2cXpX6SQ" name="SystemState"/>
+      </nestedClassifier>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_7JNFIAadEe2SsqHcGpC6iA" name="SystemOnChangeEvent"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_Wmdy0AdfEe2BTqBqaLBdYQ" name="SystemOffChangeEvent"/>
+    <packagedElement xmi:type="uml:TimeEvent" xmi:id="_eOiR0AzNEe2_rLb2A_yEYw" name="StartUpTimeEvent" isRelative="true">
+      <when xmi:type="uml:TimeExpression" xmi:id="_wyylQAzPEe2_rLb2A_yEYw" name="t">
+        <expr xmi:type="uml:LiteralInteger" xmi:id="_wyylQQzPEe2_rLb2A_yEYw" value="5"/>
+      </when>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_rTD78BftEe2A9qPD3IKuLQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_A1y50B1uEe2bwPIwMnZGcw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A1y50R1uEe2bwPIwMnZGcw" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A1y50h1uEe2bwPIwMnZGcw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A1y50x1uEe2bwPIwMnZGcw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A1y51B1uEe2bwPIwMnZGcw" key="Date" value="2022-08-16"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_A1y51R1uEe2bwPIwMnZGcw" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_rTJbgBftEe2A9qPD3IKuLQ" source="http://www.eclipse.org/uml2/5.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="./usecase_profile.profile.uml#_UMp5YR41Ee2bwPIwMnZGcw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="./usecase_profile.profile.uml#_3uOuEBfrEe2A9qPD3IKuLQ"/>
+    </profileApplication>
+  </uml:Model>
+  <usecase_profile:ReadSignalChangeEvent xmi:id="_t-wtMBftEe2A9qPD3IKuLQ" base_ChangeEvent="_7JNFIAadEe2SsqHcGpC6iA" signal_id="_bUh7AB41Ee2bwPIwMnZGcw" compare_value="1"/>
+  <usecase_profile:ReadSignalChangeEvent xmi:id="_dT72wB1gEe2bwPIwMnZGcw" base_ChangeEvent="_Wmdy0AdfEe2BTqBqaLBdYQ" signal_id="_bUh7AB41Ee2bwPIwMnZGcw" compare_value="0"/>
+  <usecase_profile:SubFunctionBehavior xmi:id="_1_2pwB4XEe2bwPIwMnZGcw" sub_function_behaviors="_lDHMIB1kEe2bwPIwMnZGcw _lKauAB1kEe2bwPIwMnZGcw _lPNHYB1kEe2bwPIwMnZGcw _exxw8B1kEe2bwPIwMnZGcw" base_FunctionBehavior="_cWY-gB1iEe2bwPIwMnZGcw"/>
+  <usecase_profile:SubFunctionBehavior xmi:id="_ZGC8IB4zEe2bwPIwMnZGcw" sub_function_behaviors="_ZF5LIR4zEe2bwPIwMnZGcw _ZF5LIh4zEe2bwPIwMnZGcw _ZF5LIx4zEe2bwPIwMnZGcw _ZF5LJB4zEe2bwPIwMnZGcw" base_FunctionBehavior="_ZF5LIB4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_dkbzAB4zEe2bwPIwMnZGcw" signal_id="_X18UQB41Ee2bwPIwMnZGcw" write_value="1" base_FunctionBehavior="_ZF5LJB4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:SubFunctionBehavior xmi:id="_1nyeUB4zEe2bwPIwMnZGcw" sub_function_behaviors="_1ns-wR4zEe2bwPIwMnZGcw _1ns-wh4zEe2bwPIwMnZGcw _1ns-wx4zEe2bwPIwMnZGcw _1ns-xB4zEe2bwPIwMnZGcw" base_FunctionBehavior="_1ns-wB4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_AOq9cB40Ee2bwPIwMnZGcw" signal_id="_YxNpsB41Ee2bwPIwMnZGcw" write_value="0" base_FunctionBehavior="_1ns-wR4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_B5PB0B40Ee2bwPIwMnZGcw" signal_id="_Zk2tIB41Ee2bwPIwMnZGcw" write_value="0" base_FunctionBehavior="_1ns-wh4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_C3TzoB40Ee2bwPIwMnZGcw" signal_id="_aY9DkB41Ee2bwPIwMnZGcw" write_value="0" base_FunctionBehavior="_1ns-wx4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_Dvpw4B40Ee2bwPIwMnZGcw" signal_id="_X18UQB41Ee2bwPIwMnZGcw" write_value="0" base_FunctionBehavior="_1ns-xB4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_Ew_5IB40Ee2bwPIwMnZGcw" signal_id="_YxNpsB41Ee2bwPIwMnZGcw" write_value="1" base_FunctionBehavior="_lDHMIB1kEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_FuLTEB40Ee2bwPIwMnZGcw" signal_id="_Zk2tIB41Ee2bwPIwMnZGcw" write_value="1" base_FunctionBehavior="_lKauAB1kEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_GlZO8B40Ee2bwPIwMnZGcw" signal_id="_aY9DkB41Ee2bwPIwMnZGcw" write_value="0" base_FunctionBehavior="_lPNHYB1kEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_HsKCsB40Ee2bwPIwMnZGcw" signal_id="_X18UQB41Ee2bwPIwMnZGcw" write_value="0" base_FunctionBehavior="_exxw8B1kEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_JIsSIB40Ee2bwPIwMnZGcw" signal_id="_YxNpsB41Ee2bwPIwMnZGcw" write_value="2" base_FunctionBehavior="_ZF5LIR4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_KHKskB40Ee2bwPIwMnZGcw" signal_id="_Zk2tIB41Ee2bwPIwMnZGcw" write_value="1" base_FunctionBehavior="_ZF5LIh4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:WriteSignalFunctionBehavior xmi:id="_LEhFoB40Ee2bwPIwMnZGcw" signal_id="_aY9DkB41Ee2bwPIwMnZGcw" write_value="1" base_FunctionBehavior="_ZF5LIx4zEe2bwPIwMnZGcw"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_X18UQB41Ee2bwPIwMnZGcw" id="Dampers" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_wohZcA2UEe2DI_2cXpX6SQ"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_YxNpsB41Ee2bwPIwMnZGcw" id="PreheaterValve" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_nWL18A2VEe2DI_2cXpX6SQ"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_Zk2tIB41Ee2bwPIwMnZGcw" id="PreheaterPump" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_nhYZUA2VEe2DI_2cXpX6SQ"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_aY9DkB41Ee2bwPIwMnZGcw" id="Fans" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_oF8e8A2VEe2DI_2cXpX6SQ"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_bUh7AB41Ee2bwPIwMnZGcw" id="SystemState" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_yBC2IA2VEe2DI_2cXpX6SQ"/>
+</xmi:XMI>

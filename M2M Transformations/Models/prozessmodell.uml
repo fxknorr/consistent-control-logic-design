@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmlns:usecase_profile="http://tuwien.ac.at/usecase.profile" xsi:schemaLocation="http://tuwien.ac.at/usecase.profile /at.ac.tuwien.openbam/profile/usecase_profile.profile.uml#_11UeUHyiEe65Y-BI6bwPGw">
+  <uml:Model xmi:id="_F-xDMG2yEe6vWc0u9yX51w" name="template">
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_F-xDMW2yEe6vWc0u9yX51w" name="StateMachine">
+      <region xmi:id="_F-xDMm2yEe6vWc0u9yX51w" name="Region">
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_F-xDM22yEe6vWc0u9yX51w" name="Start"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_F-xDNG2yEe6vWc0u9yX51w" name="Signals">
+      <ownedLiteral xmi:id="_F-xDNW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011YB01"/>
+      <ownedLiteral xmi:id="_F-xDNm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011SB01"/>
+      <ownedLiteral xmi:id="_F-xDN22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011RM01"/>
+      <ownedLiteral xmi:id="_F-xDOG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011AL01"/>
+      <ownedLiteral xmi:id="_F-xDOW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011XS01"/>
+      <ownedLiteral xmi:id="_F-xDOm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011XS03"/>
+      <ownedLiteral xmi:id="_F-xDO22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011XC01"/>
+      <ownedLiteral xmi:id="_F-xDPG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011RF01"/>
+      <ownedLiteral xmi:id="_F-xDPW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011XS02"/>
+      <ownedLiteral xmi:id="_F-xDPm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M011XS04"/>
+      <ownedLiteral xmi:id="_F-xDP22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101GW01"/>
+      <ownedLiteral xmi:id="_F-xDQG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101GW02"/>
+      <ownedLiteral xmi:id="_F-xDQW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101GW03"/>
+      <ownedLiteral xmi:id="_F-xDQm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101GW04"/>
+      <ownedLiteral xmi:id="_F-xDQ22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101GW05"/>
+      <ownedLiteral xmi:id="_F-xDRG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101GW06"/>
+      <ownedLiteral xmi:id="_F-xDRW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101GW07"/>
+      <ownedLiteral xmi:id="_F-xDRm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B101ME01"/>
+      <ownedLiteral xmi:id="_F-xDR22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_S001FR01"/>
+      <ownedLiteral xmi:id="_F-xDSG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M061SB01"/>
+      <ownedLiteral xmi:id="_F-xDSW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M061RM01"/>
+      <ownedLiteral xmi:id="_F-xDSm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M061AL01"/>
+      <ownedLiteral xmi:id="_F-xDS22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_M061FR01"/>
+      <ownedLiteral xmi:id="_F-xDTG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y061YB01"/>
+      <ownedLiteral xmi:id="_F-xDTW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y061FR01"/>
+      <ownedLiteral xmi:id="_F-xDTm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y061RF01"/>
+      <ownedLiteral xmi:id="_F-xDT22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y071YB01"/>
+      <ownedLiteral xmi:id="_F-xDUG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y071FR01"/>
+      <ownedLiteral xmi:id="_F-xDUW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y071RF01"/>
+      <ownedLiteral xmi:id="_F-xDUm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y071FR02"/>
+      <ownedLiteral xmi:id="_F-xDU22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B062ME01"/>
+      <ownedLiteral xmi:id="_F-xDVG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203ME01"/>
+      <ownedLiteral xmi:id="_F-xDVW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XS01"/>
+      <ownedLiteral xmi:id="_F-xDVm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203AW01"/>
+      <ownedLiteral xmi:id="_F-xDV22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XS02"/>
+      <ownedLiteral xmi:id="_F-xDWG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XS03"/>
+      <ownedLiteral xmi:id="_F-xDWW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XC01"/>
+      <ownedLiteral xmi:id="_F-xDWm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203RG01"/>
+      <ownedLiteral xmi:id="_F-xDW22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203ME02"/>
+      <ownedLiteral xmi:id="_F-xDXG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XS04"/>
+      <ownedLiteral xmi:id="_F-xDXW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203AW02"/>
+      <ownedLiteral xmi:id="_F-xDXm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XS05"/>
+      <ownedLiteral xmi:id="_F-xDX22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XS06"/>
+      <ownedLiteral xmi:id="_F-xDYG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203XC02"/>
+      <ownedLiteral xmi:id="_F-xDYW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B203RG02"/>
+      <ownedLiteral xmi:id="_F-xDYm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B201ME01"/>
+      <ownedLiteral xmi:id="_F-xDY22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B201XS01"/>
+      <ownedLiteral xmi:id="_F-xDZG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B201AW01"/>
+      <ownedLiteral xmi:id="_F-xDZW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B201XS02"/>
+      <ownedLiteral xmi:id="_F-xDZm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B201XS03"/>
+      <ownedLiteral xmi:id="_F-xDZ22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B201XC01"/>
+      <ownedLiteral xmi:id="_F-xDaG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B201RG01"/>
+      <ownedLiteral xmi:id="_F-xDaW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y601YB01"/>
+      <ownedLiteral xmi:id="_F-xDam2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_Y601RF01"/>
+      <ownedLiteral xmi:id="_F-xDa22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302ME01"/>
+      <ownedLiteral xmi:id="_F-xDbG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302XS01"/>
+      <ownedLiteral xmi:id="_F-xDbW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302XC01"/>
+      <ownedLiteral xmi:id="_F-xDbm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302RG01"/>
+      <ownedLiteral xmi:id="_F-xDb22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302ME02"/>
+      <ownedLiteral xmi:id="_F-xDcG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302XS02"/>
+      <ownedLiteral xmi:id="_F-xDcW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302XC02"/>
+      <ownedLiteral xmi:id="_F-xDcm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302XP01"/>
+      <ownedLiteral xmi:id="_F-xDc22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302RG02"/>
+      <ownedLiteral xmi:id="_F-xDdG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302XS03"/>
+      <ownedLiteral xmi:id="_F-xDdW2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_B302XS04"/>
+      <ownedLiteral xmi:id="_F-xDdm2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_EP01SB01"/>
+      <ownedLiteral xmi:id="_F-xDd22yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_EP01RM01"/>
+      <ownedLiteral xmi:id="_F-xDeG2yEe6vWc0u9yX51w" name="ISP0_S01_LFT1_EP01AL01"/>
+    </packagedElement>
+    <profileApplication xmi:id="_F-xDeW2yEe6vWc0u9yX51w">
+      <eAnnotations xmi:id="_F-xDem2yEe6vWc0u9yX51w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="usecase_profile.profile.uml#_CKDrARWYEe6f-fU5g2UYdw"/>
+      </eAnnotations>
+      <appliedProfile href="usecase_profile.profile.uml#_3uOuEBfrEe2A9qPD3IKuLQ"/>
+    </profileApplication>
+  </uml:Model>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDe22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011YB01" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDNW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDfG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011SB01" dp="do" dp_type="d_befehl_1" dp_function="sb_schaltbefehl" ntfcl="ntfcl_202" obj_desc="" comment="" base_EnumerationLiteral="_F-xDNm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDfW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011RM01" dp="di" dp_type="d_rm_1" dp_function="rm_rm_betrieb" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDN22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDfm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011AL01" dp="di" dp_type="d_alarm" dp_function="al_alarm" ntfcl="ntfcl_202" obj_desc="" comment="" base_EnumerationLiteral="_F-xDOG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDf22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011XS01" dp="vai" dp_type="d_n_d" dp_function="xs_man_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDOW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDgG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011XS03" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_max" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDOm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDgW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011XC01" dp="vai" dp_type="d_n_d" dp_function="xc_ber_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDO22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDgm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011RF01" dp="ai" dp_type="a_0_10v" dp_function="rf_rueckfuehrung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDPG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDg22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011XS02" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_min" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDPW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDhG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M011XS04" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_min" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDPm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDhW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101GW01" dp="vai" dp_type="d_n_d" dp_function="gw_grenzwert_kuehlen" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDP22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDhm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101GW02" dp="vai" dp_type="d_n_d" dp_function="gw_grenzwert_heizen" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDQG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDh22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101GW03" dp="vai" dp_type="d_n_d" dp_function="gw_grenzwert_le-pumpe" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDQW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDiG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101GW04" dp="vai" dp_type="d_n_d" dp_function="gw_grenzwert_anfahrlogik" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDQm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDiW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101GW05" dp="vai" dp_type="d_n_d" dp_function="gw_grenzwert_freie_aussenkuehlung" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDQ22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDim2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101GW06" dp="vai" dp_type="d_n_d" dp_function="gw_gw_sommerkomp_unten" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDRG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDi22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101GW07" dp="vai" dp_type="d_n_d" dp_function="gw_gw_sommerkomp_oben" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDRW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDjG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B101ME01" dp="ai" dp_type="a_ni1000" dp_function="me_messung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDRm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDjW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_S001FR01" dp="vdi" dp_type="d_n_d" dp_function="fr_anlagenschalter_ddc" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDR22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDjm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M061SB01" dp="do" dp_type="d_befehl_1" dp_function="sb_schaltbefehl" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDSG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDj22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M061RM01" dp="di" dp_type="d_rm_1" dp_function="rm_rm_betrieb" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDSW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDkG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M061AL01" dp="di" dp_type="d_alarm" dp_function="al_alarm" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDSm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDkW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_M061FR01" dp="vdi" dp_type="d_n_d" dp_function="fr_softschalter_ddc" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDS22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDkm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y061YB01" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDTG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDk22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y061FR01" dp="vdi" dp_type="d_n_d" dp_function="fr_softschalter_ddc" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDTW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDlG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y061RF01" dp="ai" dp_type="a_0_10v" dp_function="rf_rueckfuehrung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDTm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDlW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y071YB01" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDT22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDlm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y071FR01" dp="vdi" dp_type="d_n_d" dp_function="fr_softschalter_ddc" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDUG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDl22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y071RF01" dp="ai" dp_type="a_0_10v" dp_function="rf_rueckfuehrung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDUW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDmG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y071FR02" dp="vdi" dp_type="d_n_d" dp_function="fr_fr_entfeuchtung" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDUm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDmW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B062ME01" dp="ai" dp_type="a_ni1000" dp_function="me_messung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDU22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDmm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203ME01" dp="ai" dp_type="a_ni1000" dp_function="me_messung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDVG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDm22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XS01" dp="vai" dp_type="d_n_d" dp_function="xs_man_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDVW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDnG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203AW01" dp="vai" dp_type="d_n_d" dp_function="aw_auslegungswert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDVm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDnW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XS02" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_min" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDV22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDnm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XS03" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_max" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDWG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDn22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XC01" dp="vai" dp_type="d_n_d" dp_function="xc_ber_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDWW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDoG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203RG01" dp="vai" dp_type="d_n_d" dp_function="rg_loop_regler" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDWm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDoW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203ME02" dp="ai" dp_type="a_0_10v" dp_function="me_messung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDW22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDom2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XS04" dp="vai" dp_type="d_n_d" dp_function="xs_man_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDXG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDo22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203AW02" dp="vai" dp_type="d_n_d" dp_function="aw_auslegungswert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDXW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDpG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XS05" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_min" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDXm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDpW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XS06" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_max" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDX22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDpm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203XC02" dp="vai" dp_type="d_n_d" dp_function="xc_ber_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDYG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDp22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B203RG02" dp="vai" dp_type="d_n_d" dp_function="rg_loop_regler" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDYW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDqG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B201ME01" dp="ai" dp_type="a_ni1000" dp_function="me_messung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDYm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDqW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B201XS01" dp="vai" dp_type="d_n_d" dp_function="xs_man_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDY22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDqm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B201AW01" dp="vai" dp_type="d_n_d" dp_function="aw_auslegungswert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDZG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDq22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B201XS02" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_min" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDZW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDrG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B201XS03" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_max" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDZm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDrW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B201XC01" dp="vai" dp_type="d_n_d" dp_function="xc_ber_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDZ22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDrm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B201RG01" dp="vai" dp_type="d_n_d" dp_function="rg_loop_regler" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDaG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDr22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y601YB01" dp="ao" dp_type="a_0_10v" dp_function="yb_stellsignal" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDaW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDsG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_Y601RF01" dp="ai" dp_type="a_0_10v" dp_function="rf_rueckfuehrung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDam2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDsW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302ME01" dp="ai" dp_type="a_ni1000" dp_function="me_messung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDa22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDsm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302XS01" dp="vai" dp_type="d_n_d" dp_function="xs_man_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDbG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDs22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302XC01" dp="vai" dp_type="d_n_d" dp_function="xc_ber_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDbW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDtG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302RG01" dp="vai" dp_type="d_n_d" dp_function="rg_loop_regler" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDbm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDtW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302ME02" dp="ai" dp_type="a_0_10v" dp_function="me_messung" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDb22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDtm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302XS02" dp="vai" dp_type="d_n_d" dp_function="xs_man_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDcG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDt22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302XC02" dp="vai" dp_type="d_n_d" dp_function="xc_ber_sollwert" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDcW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDuG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302XP01" dp="vai" dp_type="d_n_d" dp_function="xp_proportionalband" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDcm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDuW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302RG02" dp="vai" dp_type="d_n_d" dp_function="rg_loop_regler" ntfcl="ntfcl_302" obj_desc="" comment="" base_EnumerationLiteral="_F-xDc22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDum2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302XS03" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_min" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDdG2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDu22yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_B302XS04" dp="vai" dp_type="d_n_d" dp_function="xs_sollwert_max" ntfcl="ntfcl_402" obj_desc="" comment="" base_EnumerationLiteral="_F-xDdW2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDvG2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_EP01SB01" dp="do" dp_type="d_befehl_1" dp_function="sb_schaltbefehl" ntfcl="ntfcl_202" obj_desc="" comment="" base_EnumerationLiteral="_F-xDdm2yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDvW2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_EP01RM01" dp="di" dp_type="d_rm_1" dp_function="rm_rm_betrieb" ntfcl="ntfcl_4194303" obj_desc="" comment="" base_EnumerationLiteral="_F-xDd22yEe6vWc0u9yX51w"/>
+  <usecase_profile:SignalEnumerationLiteral xmi:id="_F-xDvm2yEe6vWc0u9yX51w" id="ISP0_S01_LFT1_EP01AL01" dp="di" dp_type="d_alarm" dp_function="al_alarm" ntfcl="ntfcl_202" obj_desc="" comment="" base_EnumerationLiteral="_F-xDeG2yEe6vWc0u9yX51w"/>
+</xmi:XMI>

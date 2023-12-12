@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="usecase_profile" nsURI="http://tuwien.ac.at/usecase.profile"
+    nsPrefix="usecase_profile">
+  <eClassifiers xsi:type="ecore:EClass" name="ReadSignalChangeEvent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_ChangeEvent" ordered="false"
+        eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//ChangeEvent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signal_id" ordered="false"
+        lowerBound="1" eType="#//SignalEnumerationLiteral"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="compare_value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SignalEnumerationLiteral">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_EnumerationLiteral"
+        ordered="false" eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//EnumerationLiteral"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dp" ordered="false" lowerBound="1"
+        eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dp_type" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dp_function" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ntfcl" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="obj_desc" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WriteSignalFunctionBehavior">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_FunctionBehavior"
+        ordered="false" eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//FunctionBehavior"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signal_id" ordered="false"
+        lowerBound="1" eType="#//SignalEnumerationLiteral"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="write_value" ordered="false"
+        lowerBound="1" eType="ecore:EDataType ../org.eclipse.uml2.types/model/Types.ecore#//String"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubFunctionBehavior">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="base_FunctionBehavior"
+        ordered="false" eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//FunctionBehavior"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sub_function_behaviors"
+        ordered="false" lowerBound="1" upperBound="-1" eType="ecore:EClass ../org.eclipse.uml2.uml/model/UML.ecore#//FunctionBehavior"/>
+  </eClassifiers>
+</ecore:EPackage>

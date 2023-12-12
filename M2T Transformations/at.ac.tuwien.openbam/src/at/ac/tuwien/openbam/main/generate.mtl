@@ -1,0 +1,123 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.eclipse.org/uml2/5.0.0/UML')]
+
+
+[template public generateElement(aModel : uml::Model)]
+[file (aModel.name + '.st', false, 'UTF-8')]
+
+[generateEnum(stateMachine(aModel))	/]
+
+FUNCTION_BLOCK PUBLIC [stateMachine(aModel).name/]
+
+VAR_INPUT
+	[inputs(aModel)->sep(': INT;\n    ')/]: INT;
+END_VAR
+VAR_OUTPUT
+	[outputs(aModel)->sep(': INT;\n    ')/]: INT;
+END_VAR
+VAR
+    eState : E_States := 0;  [comment get pseudostate index/]
+	wait : TON;
+END_VAR
+	
+CASE eState OF
+[for (v: Vertex | states(stateMachine(aModel)))]
+	E_States.[v.name/]:
+		[for (fb: FunctionBehavior | writeBehaviours(v))]
+			[fbVariable(fb)/]:= [fbValue(fb)/];
+		[/for]
+		[for (t: Transition | outgoingTransitions(aModel, v))]
+			[if (t.trigger->isEmpty())]
+			eState := E_States.[t.target.name/];
+			[elseif (isChangeEvent(t))]
+			
+			IF ([tVariable(t)/] = [tValue(t)/]) THEN
+				eState := E_States.[t.target.name/];
+			END IF
+			[elseif (isTimeEvent(t))]
+			
+			wait(IN:=TRUE, PT:=T#[getTimeEventTime(t)/]s);
+		    
+			IF wait.Q THEN
+		        wait(IN:=FALSE);
+		        eState := E_States.[t.target.name/];
+		    END_IF
+			[/if]
+		[/for]
+[/for]
+END_CASE
+[/file]
+[/template]
+
+
+
+
+[template public generateEnum(aStateMachine: uml::StateMachine) post (trim())]
+Type E_States:
+(
+[for (s: Vertex | states(aStateMachine))]
+	[s.name/][if (states(aStateMachine)->indexOf(s) = 1)] := 0[/if][if (states(aStateMachine)->indexOf(s) < states(aStateMachine)->size())],[/if]
+[/for]
+)
+[/template]
+
+[query public isChangeEvent (t: Transition) : Boolean =
+	(t.trigger->asSequence()->first()).event.oclIsTypeOf(uml::ChangeEvent)
+/]
+
+[query public isTimeEvent (t: Transition) : Boolean =
+	(t.trigger->asSequence()->first()).event.oclIsTypeOf(uml::TimeEvent)
+/]
+
+[query public getTimeEventTime (t: Transition) : Integer =
+	(t.trigger->asSequence()->first()).event.eAllContents(uml::LiteralInteger)->first().value
+/]
+
+[query public tVariable (t: Transition) : String =
+	stereoPropValue(t.trigger->asSequence()->first().event, 'usecase_profile::ReadSignalChangeEvent', 'signal_id').oclAsType(usecase_profile::SignalEnumerationLiteral).id
+/]
+
+[query public tValue (t: Transition) : String =
+	stereoPropValue(t.trigger->asSequence()->first().event, 'usecase_profile::ReadSignalChangeEvent', 'compare_value')
+/]
+
+[query public fbVariable (fb: uml::FunctionBehavior) : String =
+	stereoPropValue(fb, 'usecase_profile::WriteSignalFunctionBehavior', 'signal_id').oclAsType(usecase_profile::SignalEnumerationLiteral).id
+/]
+
+[query public fbValue (fb: uml::FunctionBehavior) : String =
+	stereoPropValue(fb, 'usecase_profile::WriteSignalFunctionBehavior', 'write_value')
+/]
+
+[query public inputs (aModel: uml::Model) : Set(String) =
+	(aModel.eAllContents(uml::ChangeEvent)->select(e | hasStereotype(e, 'usecase_profile::ReadSignalChangeEvent')))->collect(a | stereoPropValue(a, 'usecase_profile::ReadSignalChangeEvent', 'signal_id').oclAsType(usecase_profile::SignalEnumerationLiteral).id)->asSet()
+/]
+
+[query public outputs (aModel: uml::Model) : Set(String) =
+	(aModel.eAllContents(uml::FunctionBehavior)->select(e | hasStereotype(e, 'usecase_profile::WriteSignalFunctionBehavior')))->collect(a | stereoPropValue(a, 'usecase_profile::WriteSignalFunctionBehavior', 'signal_id').oclAsType(usecase_profile::SignalEnumerationLiteral).id)->asSet()
+/]
+
+[query public stateMachine (aModel: uml::Model) : uml::StateMachine =
+	(aModel.packagedElement->select(e | e.oclIsTypeOf(uml::StateMachine)))->asOrderedSet()->first().oclAsType(uml::StateMachine)
+/]
+
+[query public writeBehaviours (aVertex: uml::Vertex) : Sequence(uml::FunctionBehavior) =
+	(aVertex.eAllContents(uml::FunctionBehavior)->select(e | hasStereotype(e, 'usecase_profile::WriteSignalFunctionBehavior')))
+/]
+
+[query public outgoingTransitions (aModel: uml::Model, aVertex: uml::Vertex) : Sequence(uml::Transition) =
+	aModel.eAllContents(uml::Transition)->select(e | e.source = aVertex)	
+/]
+
+[query public states (aStateMachine: uml::StateMachine) : Sequence(uml::Vertex) =
+	aStateMachine.eAllContents(uml::Vertex)
+/]
+
+[query public stereoPropValue(e : uml::Element, stereotypeName : String, propertyName : String) : String = 
+	e.getValue(e.getAppliedStereotype(stereotypeName), propertyName)
+/]
+
+[query public hasStereotype (e : uml::Element, stereotypeName : String) : Boolean = 
+	(not e.getAppliedStereotype(stereotypeName).oclIsUndefined())
+/]
+

@@ -1,0 +1,82 @@
+-- @path Simultan=/OpenBAM/Metamodels/Simultan.ecore
+-- @path Uml=/OpenBAM/Metamodels/UML2.ecore
+
+--
+
+module Simultan2Uml;
+create OUT : Uml from IN : Simultan, UCPROFILE : Uml;
+
+rule ucprofile2staticData {
+	from
+		s: Uml!Profile (s.name = 'usecase_profile')
+	to
+		signals: Uml!Enumeration(
+			name <- 'Signals'
+		),
+		pseudostate: Uml!Pseudostate(
+			name <- 'Start'
+		),
+		region: Uml!Region(
+			name <- 'Region',
+			subvertex <- pseudostate
+		),
+		statemachine: Uml!StateMachine(
+			name <- 'StateMachine',
+			region <- region
+		),
+		model: Uml!Model(
+			name <- 'template',
+			packagedElement <- Sequence{statemachine, signals}
+		)
+		do{
+			model.applyProfile(s);
+		}
+}
+
+rule component2enumerationLiteral {
+	from 
+		s: Simultan!SimComponentSerializable (s.components.size() = 0 and s.parameters.size() > 0 and s.instances.size() > 0)
+	to
+		t: Uml!EnumerationLiteral 
+		(
+			enumeration <- Uml!Enumeration.allInstances().first(),
+			name <- (Simultan!SimNetworkPortSerializable.allInstances() -> select(e | e.id = s.instances.first().placements.first().networkElementId)).first().name
+		)
+		do{
+			t.applyStereotype(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first());
+			t.setValue(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first(), 'id', (Simultan!SimNetworkPortSerializable.allInstances() -> select(e | e.id = s.instances.first().placements.first().networkElementId)).first().name);
+			t.setValue(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first(), 'dp', s.parameters -> select(e | e.name.text = 'DP').first().value);
+			t.setValue(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first(), 'dp_type', s.parameters -> select(e | e.name.text = 'DP Variante').first().value);
+			t.setValue(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first(), 'dp_function', s.parameters -> select(e | e.name.text = 'DP Funktion').first().value);
+			t.setValue(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first(), 'ntfcl', s.parameters -> select(e | e.name.text = 'NtfCl').first().value);
+			t.setValue(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first(), 'obj_desc', s.parameters -> select(e | e.name.text = 'Object Description').first().value);
+			t.setValue(Uml!Stereotype.allInstances()->select(e|e.name = 'SignalEnumerationLiteral').first(), 'comment', s.parameters -> select(e | e.name.text = 'Kommentar').first().value);
+		}
+}
+
+--		version: Uml!EStringToStringMapEntry (
+--			key <- 'Version', 
+--			value <- '0.0.14'
+--		),
+--		comment: Uml!EStringToStringMapEntry (
+--			key <- 'Comment', 
+--			value <- 'Profile for modeling ICE logic'
+--		),
+--		copyright: Uml!EStringToStringMapEntry (
+--			key <- 'Copyright', 
+--			value <- 'TU Wien'
+--		),
+--		date: Uml!EStringToStringMapEntry (
+--			key <- 'Date', 
+--			value <- '2022-08-17'
+--		),
+--		author: Uml!EStringToStringMapEntry (
+--			key <- 'Author', 
+--			value <- 'Felix Knorr'
+--		),
+--		papyrusAnnotations: Uml!EAnnotation (
+--			source <- 'PapyrusVersion',
+--			details <- Sequence{version, comment, copyright, date, author}--,
+--			eModelElement <- Uml!Profile -> select (e | e.name = 'usecase_profile').first()-
+--		),
+

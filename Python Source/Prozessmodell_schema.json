@@ -1,0 +1,513 @@
+{
+  "definitions": {
+    "ISimInstancePlacementSerilizable": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "KeyValuePair<Int64, String>": {},
+    "SimBaseParameterSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "type": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "$ref": "#/definitions/SimTaxonomyEntryOrStringSerializable"
+        },
+        "category": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "isAutomaticallyGenerated": {
+          "type": "boolean"
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "id",
+        "name",
+        "category",
+        "isAutomaticallyGenerated",
+        "description",
+        "value"
+      ]
+    },
+    "SimChildComponentSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "slot": {
+          "$ref": "#/definitions/SimSlotSerializable"
+        },
+        "component": {
+          "$ref": "#/definitions/SimComponentSerializable"
+        }
+      },
+      "required": [
+        "slot",
+        "component"
+      ]
+    },
+    "SimComponentSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "components": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimChildComponentSerializable"
+          }
+        },
+        "parameters": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimBaseParameterSerializable"
+          }
+        },
+        "instances": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimInstanceSerializable"
+          }
+        },
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "instanceType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "slots": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimTaxonomyEntryReferenceSerializable"
+          }
+        }
+      },
+      "required": [
+        "components",
+        "parameters",
+        "instances",
+        "id",
+        "name",
+        "description",
+        "instanceType",
+        "slots"
+      ]
+    },
+    "SimInstanceSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "placements": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/ISimInstancePlacementSerilizable"
+          }
+        },
+        "instanceType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "id": {
+          "type": "integer"
+        },
+        "instanceSize": {
+          "$ref": "#/definitions/SimInstanceSizeSerializable"
+        },
+        "instanceRotation": {
+          "type": "string"
+        },
+        "instanceParameters": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/KeyValuePair<Int64, String>"
+          }
+        }
+      },
+      "required": [
+        "placements",
+        "instanceType",
+        "name",
+        "id",
+        "instanceSize",
+        "instanceRotation",
+        "instanceParameters"
+      ]
+    },
+    "SimInstanceSizeSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "min": {
+          "type": "string"
+        },
+        "max": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "min",
+        "max"
+      ]
+    },
+    "SimNetworkBlockSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "ports": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimNetworkPortSerializable"
+          }
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "position": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "ports",
+        "id",
+        "name",
+        "color",
+        "position"
+      ]
+    },
+    "SimNetworkConnectorSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "source": {
+          "type": "integer"
+        },
+        "target": {
+          "type": "integer"
+        },
+        "color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "source",
+        "target",
+        "color"
+      ]
+    },
+    "SimNetworkPortSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "portType": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "color",
+        "portType"
+      ]
+    },
+    "SimNetworkSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "subnetworks": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimNetworkSerializable"
+          }
+        },
+        "blocks": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimNetworkBlockSerializable"
+          }
+        },
+        "connectors": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimNetworkConnectorSerializable"
+          }
+        },
+        "ports": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "#/definitions/SimNetworkPortSerializable"
+          }
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "color": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "position": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "subnetworks",
+        "blocks",
+        "connectors",
+        "ports",
+        "id",
+        "name",
+        "color",
+        "position"
+      ]
+    },
+    "SimSlotSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "slot": {
+          "$ref": "#/definitions/SimTaxonomyEntryReferenceSerializable"
+        },
+        "slotExtension": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "slot",
+        "slotExtension"
+      ]
+    },
+    "SimTaxonomyEntryOrStringSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "taxonomyEntry": {
+          "$ref": "#/definitions/SimTaxonomyEntryReferenceSerializable"
+        }
+      },
+      "required": [
+        "text",
+        "taxonomyEntry"
+      ]
+    },
+    "SimTaxonomyEntryReferenceSerializable": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "taxonomyKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "taxonomyEntryKey": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "taxonomyKey",
+        "taxonomyEntryKey"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "components": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/SimComponentSerializable"
+      }
+    },
+    "simNetworks": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "$ref": "#/definitions/SimNetworkSerializable"
+      }
+    },
+    "globalId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "fileVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "components",
+    "simNetworks",
+    "globalId",
+    "fileVersion"
+  ]
+}
