@@ -1,1 +1,0 @@
-# consistent-control-logic-design
